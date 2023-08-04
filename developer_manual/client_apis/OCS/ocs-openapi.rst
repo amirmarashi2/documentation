@@ -137,7 +137,7 @@ This is not a problem for endpoints that always return lists, but most endpoints
 For those endpoints returning `[]` in PHP is a problem because the consumer will either get `[]` or `{...}` which is hard to handle.
 
 If you are not able to use `null` for whatever reason, use `new \stdClass()` instead.
-It will get correctly converted into `{}` in the JSON response.
+It will get correctly converted into `{}` in the JSON response on Nextcloud 28 and later.
 
 If you are working with an existing API where you can not break compatibility, you can also type the result as `array<empty>`.
 
